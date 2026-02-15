@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Amour - Saint Valentin 💖</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body class="home-body">
+
+  <div class="modal active" id="modal">
+    <div class="modal-content">
+      <div class="floating-hearts">❤️✨💖</div>
+      <h1 class="romantic-title">Joyeuse Saint-Valentin</h1>
+      <p id="welcomeText" class="welcome-msg"></p>
+      <button onclick="closeModal()" class="close-btn">Découvrir nos souvenirs ✨</button>
+    </div>
+  </div>
+
+  <nav class="nav-bar">
+    <span class="logo">Pour Toi Ma Lady ❤️</span>
+    <button onclick="logout()" class="logout-link">Quitter</button>
+  </nav>
+
+  <main class="gallery-container">
+    <h2 class="section-title">Les plus beaux souvenirs</h2>
+
+    <div class="gallery-grid">
+      <div class="photo-card">
+        <div class="img-wrapper">
+          <img src="assets/images/rose.jpeg" alt="Souvenir 1">
+        </div>
+        <div class="card-info">
+          <p>Le jour où tout a commencé ❤️</p>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <div class="img-wrapper">
+          <img src="assets/images/rose1.jpeg" alt="Souvenir 2">
+        </div>
+        <div class="card-info">
+          <p>Notre première sortie 🌹</p>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <div class="img-wrapper">
+          <img src="assets/images/rose18.jpeg" alt="Souvenir 3">
+        </div>
+        <div class="card-info">
+          <p>Un moment inoubliable ✨</p>
+        </div>
+      </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose4.jpeg" alt="Souvenir 4">
+            </div>
+            <div class="card-info">
+              <p>Chaque jour à tes côtés 💖</p>
+            </div>
+          </div>
+          
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose7.jpeg" alt="Souvenir 5">
+            </div>
+            <div class="card-info">
+              <p>Notre amour grandit chaque jour 🌹</p>
+            </div>
+          </div>
+          
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose8.jpeg" alt="Souvenir 6">
+            </div>
+            <div class="card-info">
+              <p>Toi et moi, pour toujours ❤️</p>
+            </div>
+          </div>
+          
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose9.jpeg" alt="Souvenir 7">
+            </div>
+            <div class="card-info">
+              <p>Chaque instant avec toi est magique ✨</p>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose10.jpeg" alt="Souvenir 8">
+            </div>
+            <div class="card-info">
+              <p>Mon cœur bat pour toi 💖</p>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose13.jpeg" alt="Souvenir 9">
+            </div>
+            <div class="card-info">
+              <p>Notre amour est éternel 🌹</p>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose14.jpeg" alt="Souvenir 10">
+            </div>
+            <div class="card-info">
+              <p>Toi, moi, et l'infini ❤️</p>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose15.jpeg" alt="Souvenir 11">
+            </div>
+            <div class="card-info">
+              <p>Chaque jour à tes côtés est un cadeau ✨</p>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="img-wrapper">
+              <img src="assets/images/rose16.jpeg" alt="Souvenir 12">
+            </div>
+            <div class="card-info">
+              <p>Mon amour pour toi grandit chaque jour 💖</p>
+            </div>
+          </div>
+
+    </div>
+    
+ <div class="music-player">
+  <div class="music-tooltip">Lance la mélodie... ✨</div>
+  <button id="musicControl" class="music-btn">
+    <span id="musicIcon">🎵</span>
+  </button>
+  <audio id="bgMusic" loop>
+    <source src="musique.mp3" type="audio/mpeg">
+  </audio>
+ </div>
+  </main>
+
+  <script src="home.js"></script>
+</body>
+
+</html>

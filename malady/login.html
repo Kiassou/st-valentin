@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Saint Valentin 💖</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="login-card" id="card">
+    <div class="heart-icon">💖</div>
+    <h2>Accès réservé à mon amour</h2>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Ton prénom..." required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Mot de passe secret..." required>
+      </div>
+
+      <button type="submit" id="submitBtn">
+        <span class="btn-text">Entrer 💕</span>
+        <div class="spinner" id="spinner"></div>
+      </button>
+    </form>
+
+    <div id="errorMessage" class="error-message"></div>
+  </div>
+
+  <script>
+    // VERIFICATION DE SECURITÉ : Si déjà connectée, redirection vers home
+      if (localStorage.getItem("isLoggedIn") === "true") {
+        window.location.replace("home.html"); // .replace empêche de revenir en arrière avec le bouton du navigateur
+      }
+
+      const correctName = "Rokia";
+      const correctPassword = "1408025";
+
+      const loginForm = document.getElementById("loginForm");
+      const card = document.getElementById("card");
+      const submitBtn = document.getElementById("submitBtn");
+      const spinner = document.getElementById("spinner");
+      const btnText = submitBtn.querySelector(".btn-text");
+      const errorBox = document.getElementById("errorMessage");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // 1. Activer le mode "chargement" (Spinner)
+        submitBtn.disabled = true;
+        btnText.style.opacity = "0";
+        spinner.style.display = "block";
+        errorBox.classList.remove("show"); // On cache l'ancien message s'il y en avait un
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Simulation d'un petit délai pour le côté "chic" du chargement
+        setTimeout(() => {
+          if (username === correctName && password === correctPassword) {
+            // ON ENREGISTRE LA CONNEXION
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userName", username);
+            window.location.replace("home.html"); // Utilise .replace pour "écraser" l'historique
+          } else {
+            // --- ÉCHEC ---
+
+            // 2. Animation de secousse sur la carte
+            card.classList.add("shake");
+
+            // 3. Affichage du message d'erreur
+            errorBox.innerText = "😅 Désolé... tu n’es pas ma lady ❤️";
+            errorBox.classList.add("show");
+
+            // 4. Réinitialisation des champs du formulaire
+            loginForm.reset();
+
+            // 5. Remise à zéro du bouton
+            submitBtn.disabled = false;
+            btnText.style.opacity = "1";
+            spinner.style.display = "none";
+
+            // 6. DISPARITION AUTOMATIQUE APRÈS 3 SECONDES
+            setTimeout(() => {
+              errorBox.classList.remove("show");
+              card.classList.remove("shake");
+            }, 3000);
+          }
+        }, 800);
+      });
+  </script>
+</body>
+
+</html>
