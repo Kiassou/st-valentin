@@ -18,7 +18,7 @@ function closeModal() {
 function logout() {
     localStorage.removeItem("isLoggedIn"); // On retire le droit d'accès
     localStorage.removeItem("userName");
-    window.location.replace("login.html"); // Retour au login
+    window.location.replace("index.html"); // Retour au login
 }
 // On ajoute la gestion de la musique à ta fonction existante
 const bgMusic = document.getElementById("bgMusic");
@@ -59,3 +59,4 @@ function closeModal() {
         modal.classList.remove("active");
     }, 300);
 }
+
