@@ -25,7 +25,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('assets/images/soleil.jpeg') no-repeat center center/cover;
+  background: url('soleil.jpeg') no-repeat center center/cover;
   filter: brightness(0.8);
   /* Assombrit un peu l'image pour faire ressortir la carte */
   z-index: -1;
@@ -276,4 +276,5 @@ button:active {
   100% {
     left: 150%;
   }
+
 }
