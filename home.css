@@ -1,5 +1,5 @@
 .home-body {
-  background: url('assets/images/rose18.jpeg') no-repeat center center fixed;
+  background: url('rose18.jpeg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -362,4 +362,5 @@
     padding: 6px 12px;
     font-size: 0.75rem;
   }
+
 }
